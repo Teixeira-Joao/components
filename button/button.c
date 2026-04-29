@@ -21,6 +21,7 @@ void read_button(button_ctr_t *p_button_ctl)
 /**
  * @file button.c
  * @brief Reads a given input and updates the status of the button whether pressed (p_button_ctl->pressed = 1) or not (p_button_ctl->pressed = 0)
+ * @param p_button_ctl is a pointer to a button definition structure
  */
 {
     p_button_ctl->pressed = 1 ? gpio_get_level(p_button_ctl->pin) == 0 : 0;
